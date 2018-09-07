@@ -1,4 +1,8 @@
 Veebirakenduste projekt
+Meeskond:
+TNN
+Projekt:
+Eesti anonuumne foorum
 Osalejad:
 Jekaterina Gorohhova - Ramgree
 Mihhail Plohhotnitsenko - mix-anik
