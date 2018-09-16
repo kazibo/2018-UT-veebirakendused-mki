@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	text-decoration: none;
+	list-style: none;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	background-color: #819A9F
+}
+
+.logo{
+	background-color: #3B4D55;
+	opacity: 0.3;
+	background-position: center top;
+	border-radius: 10px;
+	width: 285px;
+	color: #B7CCCB;
+	font-weight: bold;
+	font-size: 60px;
+	letter-spacing: 2px;
+	padding: 5px 10px 5px 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 650px;
+}
+
+.info{
+	background-color: #B7CCCA;
+	color: #47525E;
+	font-size: 33px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.bunny{
+	background-color: #B7CCCA;
+	display: flex;
+	justify-content: center;
+}
+
+
+.jb{
+	background-color: #B7CCCA;
+	padding: 5px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.magic{
+	background-color: #B7CCCA;
+	color: blue;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+nav{
+	margin: auto;
+	width: 757px;
+	height: 100px;
+}
+
+.bottomnav{
+	background-color: #50646D;
+	font-size: 15px;
+	margin-top: 100px;
+}
+
+.bottomnav a{
+	color: #DAFEFD;
+	text-align: center;
+	padding: 0px 25px 0px;
+	font-size: 20px;
+}
+
+.bottomnav a:hover{
+	background-color: #98b1b1
+}
