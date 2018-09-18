@@ -1,0 +1,40 @@
+CREATE TABLE `Sections` (
+	`name` varchar(2) NOT NULL,
+	PRIMARY KEY (`name`)
+);
+
+CREATE TABLE `Posts` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`text` TEXT NOT NULL,
+	`time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`thread` INT NOT NULL,
+	`author` varchar(70),
+	`file_link` varchar(2000),
+	`displayname` varchar(70) NOT NULL DEFAULT 'Anonymous',
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Thread` (
+	`id` INT NOT NULL,
+	`section` varchar(2) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Sessions` (
+	`ip` varchar(15) NOT NULL,
+	`time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`browser` varchar(50) NOT NULL
+);
+
+CREATE TABLE `Users` (
+	`username` varchar(50) NOT NULL UNIQUE,
+	`password` varchar(50) NOT NULL,
+	`email` varchar(50) UNIQUE,
+	PRIMARY KEY (`username`)
+);
+
+ALTER TABLE `Posts` ADD CONSTRAINT `Posts_fk0` FOREIGN KEY (`thread`) REFERENCES `Thread`(`id`);
+
+ALTER TABLE `Posts` ADD CONSTRAINT `Posts_fk1` FOREIGN KEY (`author`) REFERENCES `Users`(`username`);
+
+ALTER TABLE `Thread` ADD CONSTRAINT `Thread_fk0` FOREIGN KEY (`section`) REFERENCES `Sections`(`name`);
