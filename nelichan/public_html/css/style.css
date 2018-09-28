@@ -17,9 +17,61 @@ body{
 	background-color: #819A9F
 }
 
+button{
+	font-size: 1.5vw;
+	color: #B0C8C8;
+	opacity: 0.6;
+	background-color: #71888E;
+	padding: 0.2vw 0.8vw 0.3vw 0.9vw;
+	border: 0;
+	border-radius: 5px;
+	outline: 0;
+	cursor: pointer;
+}
+
+button:hover{
+	opacity: 1;
+	border-color: black;
+	border: 3px;
+}
+
+button.login{
+	margin-left: 62.26vw;
+}
+
+
+input{
+	background-color: #CDDFE3;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+    display: block;
+    border: none;
+	border-radius: 5px;
+}
+
+input[type=text],input[type=password], input[type=username], input[email]{
+	width: 95%;
+}
+
+input[type=checkbox]{
+	display: inline-block;
+}
+
+input:focus{
+	background-color: #e5faff; 
+	outline: none;
+}
+
+.f_pword a{
+	color: #777777;
+	font-size: 0.8vw;
+}
+.f_pword a:hover{
+	color: #000000;
+}
+
 .logo{
 	background-color: #3B4D55;
-	background-position: relative;
 	opacity: 0.3;
 	border-radius: 0.7vw;
 	width: 14.7vw;
@@ -31,7 +83,6 @@ body{
 	margin-top: 2.6vw;
 	margin-bottom: 2.6vw;
 	margin-left: 34vw;
-	position: relative;
 }
 
 .logo a{
@@ -86,7 +137,9 @@ nav{
 .bottomnav{
 	background-color: #50646D;
 	font-size: 1.1vw;
-	margin-top: 5vw;
+	margin-top: 4vw;
+	margin-bottom: 2vw;
+	padding-bottom: 0.1vw;
 }
 
 .bottomnav a{
@@ -95,6 +148,7 @@ nav{
 	padding-right: 1.75vw;
 	margin-right: 0.2vw;
 	margin-left: 0.2vw;
+	padding-bottom: 0.1vw;
 }
 
 .bottomnav a:first-child{
@@ -108,3 +162,85 @@ nav{
 .bottomnav a:hover{
 	background-color: #98b1b1
 }
+
+
+
+
+
+
+/* modal menu ================================================================== */
+
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  width: 30%;
+  margin-top: 10px;
+  color: #B0C8C8;
+  background-color: #71888E;
+}
+
+.signupbtn{
+  margin-left: 10%;
+}
+.cancelbtn{
+  margin-left: 15%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 15px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #71888E;
+	opacity: 0.95;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #B7CCCA;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #CDDFE3;
+	border-radius: 15px;
+    width: 35%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #71888E;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover, .close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* modal menu ================================================================== */
