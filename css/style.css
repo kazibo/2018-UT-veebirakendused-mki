@@ -33,6 +33,9 @@ button:hover{
 	opacity: 1;
 	border-color: black;
 	border: 3px;
+	//outline: 2px;
+	//outline-color: black;
+	//font-size: 1.4vw;
 }
 
 button.login{
@@ -49,12 +52,13 @@ input{
 	border-radius: 5px;
 }
 
-input[type=text],input[type=password], input[type=username], input[email]{
+input[type=text],input[type=password], input[type=username]{
 	width: 95%;
 }
 
 input[type=checkbox]{
 	display: inline-block;
+	//margin-bottom: 20px;
 }
 
 input:focus{
@@ -173,6 +177,7 @@ nav{
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
+  float: center;
   width: 30%;
   margin-top: 10px;
   color: #B0C8C8;
