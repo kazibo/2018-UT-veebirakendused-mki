@@ -6,10 +6,7 @@ $password = filter_input(INPUT_POST, 'password');
  
 if(!empty($username) && !empty($password))
 {
-	$host = "localhost";
-	$dbusername = "root";
-	$dbpassword = "rootroot";
-	$dbname = "Data";
+	require_once("/external_includes/dbdata.php");
 
 	// Create connection
 	$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
@@ -20,8 +17,10 @@ if(!empty($username) && !empty($password))
 	}
 	else{
 		$enq_pass = MD5($password);
-		$sql = "SELECT * FROM Users WHERE (username='$username' or email='$username') and password='$enq_pass'";
-		$result = $conn->query($sql);
+		$stmt = $conn->prepare("SELECT * FROM Users WHERE (username=? or email=?) and password='$enq_pass'");
+		$stmt->bind_param("ss",$username,$username);
+		$stmt->execute();
+		$result = $stmt->get_result();
 
 		if ($result->num_rows == 1)
 		{

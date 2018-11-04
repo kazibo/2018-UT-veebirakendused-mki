@@ -1,4 +1,4 @@
-	
+		<footer>
 			<nav>
 				<div class="bottomnav" id="myBottomnav">
 					<a href="index.php">Home</a>
@@ -10,7 +10,8 @@
 					<a href="contacts.php">Contacts</a>
 				</div>
 			</nav>
-		</header>
+		</footer>
 		<script src="js/modal.js"></script>
+		<script src="js/map.js"></script>
 	</body>
 </html>

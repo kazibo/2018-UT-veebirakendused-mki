@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Example payment usage - Swedbank - pangalink.net</title>
+        <title>Example payyment usage - Swedbank - pangalink.net</title>
     </head>
     <body>
 <?php
