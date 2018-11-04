@@ -8,10 +8,7 @@
  
 if(!empty($username) && !empty($password) && !empty($email) && $password == $password_r)
 {
-	$host = "localhost";
-	$dbusername = "root";
-	$dbpassword = "rootroot";
-	$dbname = "Data";
+	require_once("/external_includes/dbdata.php");
 
 	// Create connection
 	$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
@@ -22,9 +19,11 @@ if(!empty($username) && !empty($password) && !empty($email) && $password == $pas
 	}
 	else{
 		$enq_pass = MD5($password);
-		$sql = "INSERT INTO Users (username, password, email)
-		values ('$username','$enq_pass','$email')";
-		if ($conn->query($sql))
+		
+		$stmt = $conn->prepare("INSERT INTO Users (username, password, email) values (?,'$enq_pass',?)");
+		$stmt->bind_param("ss",$username,$email);
+		
+		if ($stmt->execute())
 		{
 			$subject = "Nelichan Registration Confirmation";
 			$txt = "Hi, thanks for your registration.";
