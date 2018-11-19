@@ -1,3 +1,4 @@
+<?php include "php/languages/config.php"; ?>
 <!doctype html>
 
 <html lang="en">
@@ -8,7 +9,7 @@
 <?php include 'php/header.php';?>
 			<section class="sel">
 				<div class="info">
-					<h2>Donate page</h2>
+					<h2><?php echo $lang['menu_donate'] ?></h2>
 				</div>
 			</section>
 			
@@ -17,8 +18,8 @@
 					<form class="donation" method="post" action="php/pay.php">
 						<div class="donation-container">
 							
-							<label for="damount"><strong>Amount</strong></label>
-							<input type="text" placeholder="Amount" name="damount" id="damount" required>
+							<label for="damount"><strong><?php echo $lang['donate_amount'];?></strong></label>
+							<input type="text" placeholder=<?php echo $lang['donate_amount'];?> name="damount" id="damount" required>
 							
 							<div class="clearfix">
 								<button type="submit">Proceed</button>

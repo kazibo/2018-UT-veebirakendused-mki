@@ -190,6 +190,10 @@ input:focus{
 	justify-content: center;
 }
 
+#visitors, #country, #browser, #OS{
+	margin-left: 0.4vw;
+}
+
 nav{
 	margin: auto;
 	width: 50vw;

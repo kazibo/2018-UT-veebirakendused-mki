@@ -52,15 +52,18 @@ function testAPI()
     if (response.authResponse)
 	{
 		FB.api('/me', {locale: 'en_US', fields: 'name, email, birthday'},
-		function(response) {
-			document.getElementById('status').innerHTML = 'Good to see you, ' + response.name + ' | ' + response.email + ' | ';
+		function(response)
+		{
+			var logged = "<?php echo $_SESSION['loggedin']?>";
+			
+			document.getElementById('status').innerHTML = response.email + "|" + logged + "|" + response.authResponse.userID + "|"; //'Good to see you, ' + response.name + ' | ' + response.email + ' | ';
 			console.debug(response);
 		});
     }
-	else
+	/*else
 	{
 		document.getElementById('status').innerHTML = 'User cancelled login or did not fully authorize.';
-    }
+    }*/
 }, {
     scope: 'email',
     return_scopes: true
