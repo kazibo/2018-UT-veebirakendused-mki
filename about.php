@@ -1,3 +1,4 @@
+<?php include "php/languages/config.php"; ?>
 <!doctype html>
 
 <html lang="en">
@@ -8,7 +9,7 @@
 <?php include 'php/header.php';?>
 			<section class="sel">
 				<div class="info">
-					<h2>About page</h2>
+					<h2><?php echo $lang['menu_about'] ?></h2>
 				</div>
 			</section>
 			
@@ -16,7 +17,7 @@
 				<hr>
 			
 				<div class="mapHeader">
-					Where the hell is Estonia?
+					<?php echo $lang['about_map'] ?>
 				</div>
 				
 				<div class="map" id="map"></div>

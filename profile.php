@@ -1,3 +1,4 @@
+<?php include "php/languages/config.php"; ?>
 <!doctype html>
 
 <html lang="en">

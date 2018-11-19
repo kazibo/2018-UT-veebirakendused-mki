@@ -1,3 +1,4 @@
+<?php include "php/languages/config.php"; ?>
 <!doctype html>
 
 <html lang="en">
@@ -8,7 +9,7 @@
 <?php include 'php/header.php';?>
 			<section class="sel">
 				<div class="info">
-					<h2>FAQ page</h2>
+					<h2><?php echo $lang['menu_faq'] ?></h2>
 				</div>
 			</section>
 			<main class="main_part">

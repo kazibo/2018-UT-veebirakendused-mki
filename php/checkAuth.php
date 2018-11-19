@@ -16,6 +16,9 @@
 	}
 	else
 	{
+		$_SESSION['loggedin'] == false;
+		
+		//include 'FBButton.php';
 		include 'logRegButtons.php';
 		
 		if($_SERVER['PHP_SELF'] == "/profile.php")

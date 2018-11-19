@@ -56,8 +56,8 @@ $fields = array(
         "VK_REF"         => "1234567897",
         "VK_LANG"        => "EST",
         "VK_MSG"         => "Charity",
-        "VK_RETURN"      => "http://142.93.99.88:3480/project/5bd46ccb6d4513228f8c2bb7?payment_action=success",
-        "VK_CANCEL"      => "http://142.93.99.88:3480/project/5bd46ccb6d4513228f8c2bb7?payment_action=cancel",
+        "VK_RETURN"      => "https://nelichan.tk/donate.php",
+        "VK_CANCEL"      => "https://nelichan.tk/donate.php",
         "VK_DATETIME"    => $timezone,
         "VK_ENCODING"    => "utf-8",
 );
