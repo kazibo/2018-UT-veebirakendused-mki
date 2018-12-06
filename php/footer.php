@@ -14,10 +14,6 @@
 		<script src="js/modal.js"></script>
 		<script src="js/map.js"></script>
 		<script src="js/lang.js"></script>
-		<script src="js/stats_visitor.js"></script>
-		<script src="js/stats_country.js"></script>
 		<script src="js/stats_browser.js"></script>
-		<script src="js/stats_os.js"></script>
-		<script src="js/bookmarks.js"></script>
 	</body>
 </html>

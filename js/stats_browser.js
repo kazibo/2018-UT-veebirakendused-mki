@@ -1,20 +1,79 @@
-if (window.XMLHttpRequest)
-{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
-}
-
-else
-{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-}
-
-xmlhttp.onreadystatechange=function()
+function getVisitors(timestamp)
 {
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-	{
-		document.getElementById("browser").innerHTML = xmlhttp.responseText;
-	}
+    var queryString = {'timestamp' : timestamp};
+
+    $.ajax(
+        {
+            type: 'GET',
+            url: 'https://nelichan.tk/php/visitors.php',
+            data: queryString,
+            success: function(data){
+                var obj = jQuery.parseJSON(data);
+                $('#visitors').html(obj.count);
+                getVisitors(obj.timestamp);
+            }
+        }
+    );
 }
 
-xmlhttp.open("GET", "https://nelichan.tk/php/topBrowser.php", false);
-xmlhttp.send();
+function getOpsys(timestamp)
+{
+    var queryString = {'timestamp' : timestamp};
+
+    $.ajax(
+        {
+            type: 'GET',
+            url: 'https://nelichan.tk/php/topOS.php',
+            data: queryString,
+            success: function(data){
+                var obj = jQuery.parseJSON(data);
+                $('#OS').html(obj.system);
+                getOpsys(obj.timestamp);
+            }
+        }
+    );
+}
+
+function getBrowser(timestamp)
+{
+    var queryString = {'timestamp' : timestamp};
+
+    $.ajax(
+        {
+            type: 'GET',
+            url: 'https://nelichan.tk/php/topBrowser.php',
+            data: queryString,
+            success: function(data){
+                var obj = jQuery.parseJSON(data);
+                $('#browser').html(obj.browser);
+                getBrowser(obj.timestamp);
+            }
+        }
+    );
+}
+
+function getCountry(timestamp)
+{
+    var queryString = {'timestamp' : timestamp};
+
+    $.ajax(
+        {
+            type: 'GET',
+            url: 'https://nelichan.tk/php/topCountry.php',
+            data: queryString,
+            success: function(data){
+                var obj = jQuery.parseJSON(data);
+                $('#country').html(obj.country);
+                getCountry(obj.timestamp);
+            }
+        }
+    );
+}
+
+// initialize jQuery
+$(function() {
+    getVisitors();
+	getOpsys();
+	getCountry();
+	getBrowser();
+});
