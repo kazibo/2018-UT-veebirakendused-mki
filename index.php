@@ -5,14 +5,16 @@
 	<head>
 		<title><?php echo $lang['title'] ?></title>
 		<meta name="description" content="Welcome to Nelichan - Estonian social forum site">
-
+		
 <?php include 'php/header.php';?>
 <?php include 'php/usersData.php';?>
 			
 			<main class="main_part">
 					<a class="magic" href="#stats"><?php echo $lang['stat_check'];?></a>
 					<div class="bunny">
-						<img src= "images/unavailable.gif" class="jb" alt="jumping bunny">
+					<video width="320" height="240" autoplay loop>
+						<source src="images/unavailable.webm" type="video/webm">
+					</video>
 					</div>
 					
 					<div class="magic">
